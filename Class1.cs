@@ -4,18 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BethanysPieShopHRM.HR
+namespace Create_Interface
 {
-    public interface IEmployee
+    public interface IEmployee         //INTERFACE
     {
-        double ReceiveWage();
-        void GiveBonus();
-        void PerformWork();
-        void StopWorking();
-        void DisplayEmployeeDetails();
-
-        void GiveCompliment();
-        void AttendManagementMeeting();
-        void ResearchNewPieTastes(int v);
+       
+        void Calculate();
+        void Display();
     }
 }

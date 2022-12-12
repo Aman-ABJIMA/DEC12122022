@@ -1,41 +1,40 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-
-namespace BethanysPieShopHRM.HR
+﻿using Create_Interface;
+using System;
+namespace interFace
 {
     class Program
     {
+
+
         static void Main(string[] args)
         {
-            
-
-            Employee bethany = new StoreManager(10009,"Bethany", "Smith", "bethany@snowball.be", new DateTime(1979, 1, 16), 25);
-            Manager mary = new Manager(10008,"Mary", "Jones", "mary@snowball.be", new DateTime(1965, 1, 16), 30);
-            JuniorResearcher bobJunior = new JuniorResearcher(10007,"Bob", "Spencer", "bob@snowball.be", new DateTime(1988, 1, 23), 17);
-            Employee kevin = new StoreManager(10006,"Kevin", "Marks", "kevin@snowball.be", new DateTime(1953, 12, 12), 10);
-            Employee kate = new StoreManager(10005,"Kate", "Greggs", "kate@snowball.be", new DateTime(1993, 8, 8), 10);
-
-
-            List<Employee> employees = new List<Employee>();
-            employees.Add(bethany);
-            employees.Add(kevin);
-            employees.Add(kate);
-            employees.Add(bobJunior);
-            employees.Add(kate);
-
-            employees.Sort();
-
-            foreach (var employee in employees)
-            {
-                employee.PerformWork();
-                employee.ReceiveWage();
-                employee.DisplayEmployeeDetails();
-                employee.GiveBonus();
-                //employee.AttendManagementMeeting();
-            }
-
-            Console.ReadLine();
+            //Object 1
+            MAIN AMAN = new MAIN();            
+            AMAN.empName = "aman singh";
+            AMAN.email = "asingh@gmail.com";
+            AMAN.empId = 10005;
+            AMAN.hourlypay = 100;
+            AMAN.noOfHoursWorked = 8;
+            AMAN.Calculate();
+            AMAN.Display();
+            //Object2
+            MAIN ROHIT = new MAIN();
+            ROHIT.empName = "rohit singh";
+            ROHIT.email = "rsingh@gmail.com";
+            ROHIT.empId = 10006;
+            ROHIT.hourlypay = 80;
+            ROHIT.noOfHoursWorked = 6;
+            ROHIT.Calculate();
+            ROHIT.Display();
+            //Object3
+            MAIN ABHI = new MAIN();
+            ABHI.empName = "abhi singh";
+            ABHI.email = "abhisingh@gmail.com";
+            ABHI.empId = 10007;
+            ABHI.hourlypay = 70;
+            ABHI.noOfHoursWorked = 8;
+            ABHI.Calculate();
+            ABHI.Display();
         }
     }
 }
